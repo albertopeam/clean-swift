@@ -37,10 +37,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Gn-HX-Uo4">
+                                <rect key="frame" x="16" y="49" width="88" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="nCy-Nx-jB4"/>
+                                </constraints>
+                                <state key="normal" title="Show alert"/>
+                                <connections>
+                                    <action selector="showAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ES-fZ-Wos"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Gn-HX-Uo4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="5qH-46-QcH"/>
                             <constraint firstItem="0UU-U9-QXF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="eew-du-BEs"/>
+                            <constraint firstItem="6Gn-HX-Uo4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="n5r-tB-Qrz"/>
                             <constraint firstItem="0UU-U9-QXF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="r9O-3j-Qba"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yot-SI-qnP" secondAttribute="trailing" constant="16" id="say-c3-7Vn"/>
                         </constraints>
