@@ -7,6 +7,7 @@ target 'CleanSwift' do
 
   # Pods for CleanSwift
   pod 'Just'  
+  pod 'Kingfisher', '~> 4.0'
 
   target 'CleanSwiftTests' do
     inherit! :search_paths

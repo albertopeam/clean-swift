@@ -1,12 +1,15 @@
 PODS:
   - Just (0.6.0)
+  - Kingfisher (4.1.0)
 
 DEPENDENCIES:
   - Just
+  - Kingfisher (~> 4.0)
 
 SPEC CHECKSUMS:
   Just: 0b60164cc2b516fbddd8948ef7841c70896f1e4d
+  Kingfisher: f14df8cbe576bf55f211fa589e9869bceb4ea87d
 
-PODFILE CHECKSUM: bdff97c1274900a1ab34a91ebf656d229f463bd0
+PODFILE CHECKSUM: 2ec8d923d26e9e81504773896b8c579cd8b520d6
 
 COCOAPODS: 1.3.1

@@ -35,7 +35,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="59a-is-dzZ">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="59a-is-dzZ">
                                                     <rect key="frame" x="16" y="16" width="116" height="128"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="116" id="QoL-FM-Yev"/>
@@ -90,4 +90,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="placeholder" width="128" height="128"/>
+    </resources>
 </document>

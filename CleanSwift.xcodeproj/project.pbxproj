@@ -161,9 +161,9 @@
 		C330F9281FB3472E00E6CE60 /* CleanSwift */ = {
 			isa = PBXGroup;
 			children = (
+				C3C22D631FE4129F004C8D3E /* app */,
 				C3FB4A1B1FE2C6C400F86EB0 /* domain */,
 				C32C1BA51FE2A29200D6A455 /* gateway */,
-				C351BA731FE26FEB00ED7C3F /* deals */,
 				C330F9291FB3472E00E6CE60 /* AppDelegate.swift */,
 				C330F92D1FB3472E00E6CE60 /* Main.storyboard */,
 				C330F9301FB3472E00E6CE60 /* Assets.xcassets */,
@@ -198,6 +198,14 @@
 				C3C22D611FE40346004C8D3E /* DealCell.swift */,
 			);
 			path = deals;
+			sourceTree = "<group>";
+		};
+		C3C22D631FE4129F004C8D3E /* app */ = {
+			isa = PBXGroup;
+			children = (
+				C351BA731FE26FEB00ED7C3F /* deals */,
+			);
+			path = app;
 			sourceTree = "<group>";
 		};
 		C3FB4A151FE2C25300F86EB0 /* network */ = {
@@ -442,10 +450,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CleanSwift/Pods-CleanSwift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Just/Just.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Just.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
