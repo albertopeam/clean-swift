@@ -22,6 +22,9 @@
 		C3395D531FE2ACA200E35247 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3395D521FE2ACA200E35247 /* Request.swift */; };
 		C3395D551FE2ACAF00E35247 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3395D541FE2ACAF00E35247 /* Response.swift */; };
 		C3C22D621FE40346004C8D3E /* DealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C22D611FE40346004C8D3E /* DealCell.swift */; };
+		C3C22D651FE413EE004C8D3E /* DealsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C22D641FE413EE004C8D3E /* DealsInteractor.swift */; };
+		C3C22D671FE413FC004C8D3E /* DealsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C22D661FE413FC004C8D3E /* DealsPresenter.swift */; };
+		C3C22D691FE41412004C8D3E /* DealsAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C22D681FE41412004C8D3E /* DealsAssembler.swift */; };
 		C3FB4A171FE2C2C900F86EB0 /* GetDeals.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB4A161FE2C2C900F86EB0 /* GetDeals.swift */; };
 		C3FB4A1D1FE2C6D600F86EB0 /* Deal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB4A1C1FE2C6D600F86EB0 /* Deal.swift */; };
 		C3FB4A1F1FE2C9BB00F86EB0 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FB4A1E1FE2C9BB00F86EB0 /* NetworkError.swift */; };
@@ -69,6 +72,9 @@
 		C3395D521FE2ACA200E35247 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		C3395D541FE2ACAF00E35247 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		C3C22D611FE40346004C8D3E /* DealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealCell.swift; sourceTree = "<group>"; };
+		C3C22D641FE413EE004C8D3E /* DealsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsInteractor.swift; sourceTree = "<group>"; };
+		C3C22D661FE413FC004C8D3E /* DealsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsPresenter.swift; sourceTree = "<group>"; };
+		C3C22D681FE41412004C8D3E /* DealsAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsAssembler.swift; sourceTree = "<group>"; };
 		C3FB4A161FE2C2C900F86EB0 /* GetDeals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDeals.swift; sourceTree = "<group>"; };
 		C3FB4A1C1FE2C6D600F86EB0 /* Deal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deal.swift; sourceTree = "<group>"; };
 		C3FB4A1E1FE2C9BB00F86EB0 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -196,6 +202,9 @@
 			children = (
 				C330F92B1FB3472E00E6CE60 /* DealsViewController.swift */,
 				C3C22D611FE40346004C8D3E /* DealCell.swift */,
+				C3C22D641FE413EE004C8D3E /* DealsInteractor.swift */,
+				C3C22D661FE413FC004C8D3E /* DealsPresenter.swift */,
+				C3C22D681FE41412004C8D3E /* DealsAssembler.swift */,
 			);
 			path = deals;
 			sourceTree = "<group>";
@@ -536,10 +545,13 @@
 				C330F92C1FB3472E00E6CE60 /* DealsViewController.swift in Sources */,
 				C330F92A1FB3472E00E6CE60 /* AppDelegate.swift in Sources */,
 				C3C22D621FE40346004C8D3E /* DealCell.swift in Sources */,
+				C3C22D671FE413FC004C8D3E /* DealsPresenter.swift in Sources */,
 				C3FB4A1D1FE2C6D600F86EB0 /* Deal.swift in Sources */,
 				C3FB4A171FE2C2C900F86EB0 /* GetDeals.swift in Sources */,
+				C3C22D651FE413EE004C8D3E /* DealsInteractor.swift in Sources */,
 				C3395D4D1FE2A84F00E35247 /* AlamofireAPI.swift in Sources */,
 				C3FB4A1F1FE2C9BB00F86EB0 /* NetworkError.swift in Sources */,
+				C3C22D691FE41412004C8D3E /* DealsAssembler.swift in Sources */,
 				C3395D531FE2ACA200E35247 /* Request.swift in Sources */,
 				C3395D4F1FE2A88300E35247 /* API.swift in Sources */,
 			);

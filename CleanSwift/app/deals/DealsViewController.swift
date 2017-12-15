@@ -11,7 +11,18 @@ import UIKit
 class DealsViewController: UIViewController, UICollectionViewDataSource {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    fileprivate let presenter: DealsPresenter
     fileprivate var deals:Array<Deal> = Array()
+
+    
+    init(presenter: DealsPresenter) {
+        self.presenter = presenter
+        super.init(nibName: "DealsViewController", bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) is not supported")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
