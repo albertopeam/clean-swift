@@ -8,16 +8,13 @@
 
 import UIKit
 
-class DealsViewController: UIViewController, UICollectionViewDataSource {
+class DealsViewController: UIViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
     fileprivate let presenter: DealsPresenter
-    fileprivate var deals:Array<Deal> = Array()
-
     
     init(presenter: DealsPresenter) {
         self.presenter = presenter
-        super.init(nibName: "DealsViewController", bundle: nil)
+        super.init(nibName: "DealsView", bundle: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -26,9 +23,12 @@ class DealsViewController: UIViewController, UICollectionViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let dealsView:DealsView = view as! DealsView
+        //dealsView.collectionView.register(DealCell.self, forCellWithReuseIdentifier: "deal_cell")
+        dealsView.collectionView.register(UINib(nibName: "DealCell", bundle: nil), forCellWithReuseIdentifier: "deal_cell")
         do {
-            deals = try GetDeals().get()
-            collectionView.reloadData()
+            let deals:Array<Deal> = try GetDeals().get()
+            dealsView.reloadData(deals: deals)
         } catch let error as NetworkError{
             print("Networ error: \(error.code as Optional) [\(error.error as Optional)")
         } catch {
@@ -36,23 +36,7 @@ class DealsViewController: UIViewController, UICollectionViewDataSource {
         }
     }
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
     
-    func collectionView(_ collectionView: UICollectionView,
-                                 numberOfItemsInSection section: Int) -> Int {
-        return deals.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView,
-                                 cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell:DealCell = collectionView.dequeueReusableCell(withReuseIdentifier: "deal_cell",
-                                                      for: indexPath) as! DealCell
-        let deal:Deal = deals[indexPath.row]
-        cell.setup(deal: deal)
-        return cell
-    }
 
     @IBAction func showAlert(_ sender: UIButton) {
         let alert = UIAlertController(title: "Its an alert", message: "its a message", preferredStyle: UIAlertControllerStyle.alert)

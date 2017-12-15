@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+class DealsAssembler {
+    class func resolve() -> DealsViewController {
+        let presenter:DealsPresenter = DealsPresenter()
+        return DealsViewController(presenter: presenter)
+    }
+}
