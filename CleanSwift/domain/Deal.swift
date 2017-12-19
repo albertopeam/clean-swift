@@ -9,30 +9,7 @@
 import Foundation
 
 class Deal{
-    /*
-     
-     "internalName": "BATMANARKHAMASYLUMGAMEOFTHEYEAREDITION",
-     "title": "Batman: Arkham Asylum Game of the Year Edition",
-     "metacriticLink": "/game/pc/batman-arkham-asylum---game-of-the-year-edition",
-     "dealID": "WmiQczaqtR1czja83xUulOngMhmt1SFdv5lVVA1GUo0%3D",
-     "storeID": "6",
-     "gameID": "146",
-     "salePrice": "19.99",
-     "normalPrice": "19.99",
-     "isOnSale": "0",
-     "savings": "0.000000",
-     "metacriticScore": "0",
-     "steamRatingText": "Overwhelmingly Positive",
-     "steamRatingPercent": "96",
-     "steamRatingCount": "9943",
-     "steamAppID": "35140",
-     "releaseDate": 1269561600,
-     "lastChange": 1512463167,
-     "dealRating": "0.0",
-     "thumb": "http://cdn.akamai.steamstatic.com/steam/apps/35140/capsule_sm_120.jpg?t=1461102651"
-     
-     */
-    
+   
     var title: String!
     var dealId: String!
     var thumb: String!
@@ -42,8 +19,21 @@ class Deal{
     var steamRatingPercent: String!
     var steamRatingText: String!
     
-    init(title:String!, thumb:String!) {
+    init(title:String!,
+         thumb:String!,
+         dealId: String!,
+         releaseDate: NSInteger!,
+         salePrice: String!,
+         normalPrice: String!,
+         steamRatingPercent: String!,
+         steamRatingText: String!) {
         self.title = title;
         self.thumb = thumb;
+        self.dealId = dealId;
+        self.releaseDate = releaseDate;
+        self.salePrice = salePrice;
+        self.normalPrice = normalPrice;
+        self.steamRatingPercent = steamRatingPercent;
+        self.steamRatingText = steamRatingText;
     }
 }

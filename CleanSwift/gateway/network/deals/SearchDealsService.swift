@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+class SearchDealsService{
+    func get() throws -> Array<Deal>{
+        return Array()
+    }
+}

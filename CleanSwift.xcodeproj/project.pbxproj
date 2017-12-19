@@ -18,6 +18,7 @@
 		C330F93F1FB3472E00E6CE60 /* CleanSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C330F93E1FB3472E00E6CE60 /* CleanSwiftTests.swift */; };
 		C330F94A1FB3472E00E6CE60 /* CleanSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C330F9491FB3472E00E6CE60 /* CleanSwiftUITests.swift */; };
 		C3461F901FE9209B00565A28 /* Exception.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3461F8F1FE9209B00565A28 /* Exception.swift */; };
+		C3461F921FE9490900565A28 /* SearchDealsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3461F911FE9490900565A28 /* SearchDealsService.swift */; };
 		C3C22D621FE40346004C8D3E /* DealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C22D611FE40346004C8D3E /* DealCell.swift */; };
 		C3C22D651FE413EE004C8D3E /* DealsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C22D641FE413EE004C8D3E /* DealsInteractor.swift */; };
 		C3C22D671FE413FC004C8D3E /* DealsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C22D661FE413FC004C8D3E /* DealsPresenter.swift */; };
@@ -70,6 +71,7 @@
 		C330F9491FB3472E00E6CE60 /* CleanSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftUITests.swift; sourceTree = "<group>"; };
 		C330F94B1FB3472E00E6CE60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3461F8F1FE9209B00565A28 /* Exception.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Exception.swift; path = CleanSwift/domain/Exception.swift; sourceTree = SOURCE_ROOT; };
+		C3461F911FE9490900565A28 /* SearchDealsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDealsService.swift; sourceTree = "<group>"; };
 		C3C22D611FE40346004C8D3E /* DealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealCell.swift; sourceTree = "<group>"; };
 		C3C22D641FE413EE004C8D3E /* DealsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsInteractor.swift; sourceTree = "<group>"; };
 		C3C22D661FE413FC004C8D3E /* DealsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsPresenter.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				C3FB4A161FE2C2C900F86EB0 /* GetDealsService.swift */,
+				C3461F911FE9490900565A28 /* SearchDealsService.swift */,
 			);
 			path = deals;
 			sourceTree = "<group>";
@@ -554,6 +557,7 @@
 				C3C22D6D1FE421FB004C8D3E /* DealsView.swift in Sources */,
 				C3C4774F1FE7CC920040B86E /* Provider.swift in Sources */,
 				C330F92A1FB3472E00E6CE60 /* AppDelegate.swift in Sources */,
+				C3461F921FE9490900565A28 /* SearchDealsService.swift in Sources */,
 				C3C22D621FE40346004C8D3E /* DealCell.swift in Sources */,
 				C3C22D671FE413FC004C8D3E /* DealsPresenter.swift in Sources */,
 				C3FB4A1D1FE2C6D600F86EB0 /* Deal.swift in Sources */,

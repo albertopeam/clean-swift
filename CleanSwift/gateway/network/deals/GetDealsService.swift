@@ -17,7 +17,14 @@ class GetDealsService:GetDeals {
             let array:Array<NSDictionary> = result.json as! Array<NSDictionary>
             var deals:Array<Deal> = Array()
             for itemD in array{
-                let deal = Deal(title: itemD.object(forKey:"title") as! String, thumb: itemD.object(forKey:"thumb") as! String)
+                let deal = Deal(title: itemD.object(forKey:"title") as! String,
+                                thumb: itemD.object(forKey:"thumb") as! String,
+                                dealId: itemD.object(forKey:"dealID") as! String,
+                                releaseDate: itemD.object(forKey:"releaseDate") is NSNull ? 0: itemD.object(forKey:"releaseDate") as! NSInteger,
+                                salePrice: itemD.object(forKey:"salePrice") is NSNull ? "-": itemD.object(forKey:"salePrice") as! String,
+                                normalPrice: itemD.object(forKey:"normalPrice") is NSNull ? "-": itemD.object(forKey:"normalPrice") as! String,
+                                steamRatingPercent: itemD.object(forKey:"steamRatingPercent") is NSNull ? "-": itemD.object(forKey:"steamRatingPercent") as! String,
+                                steamRatingText: itemD.object(forKey:"steamRatingText") is NSNull ? "-": itemD.object(forKey:"steamRatingText") as! String)
                 deals.append(deal)
             }
             return deals
