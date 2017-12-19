@@ -10,7 +10,11 @@ import Foundation
 
 class DealsAssembler {
     class func resolve() -> DealsViewController {
-        let presenter:DealsPresenter = DealsPresenter()
+        let getDeals:GetDeals = GetDealsService();
+        let bgQueue:OperationQueue = Provider.sharedInstance.bgQueue
+        let mainQueue:OperationQueue = Provider.sharedInstance.mainQueue
+        let dealsInteractor:DealsInteractor = DealsInteractor(getDeals: getDeals, bgQueue: bgQueue, mainQueue: mainQueue)
+        let presenter:DealsPresenter = DealsPresenter(getDeals: dealsInteractor)
         return DealsViewController(presenter: presenter)
     }
 }

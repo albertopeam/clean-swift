@@ -9,7 +9,7 @@
 import Foundation
 import Just
 
-class GetDeals {
+class GetDealsService:GetDeals {
     
     func get() throws -> Array<Deal>{
         let result:HTTPResult = Just.get("https://www.cheapshark.com/api/1.0/deals?desc=1&pageSize=25")
@@ -22,7 +22,7 @@ class GetDeals {
             }
             return deals
         }else{
-            throw NetworkError(code: result.statusCode, error: result.reason)
+            throw NetworkException(code: result.statusCode, error: result.reason)
         }
     }
     

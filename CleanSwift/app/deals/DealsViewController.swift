@@ -24,28 +24,21 @@ class DealsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let dealsView:DealsView = view as! DealsView
-        //dealsView.collectionView.register(DealCell.self, forCellWithReuseIdentifier: "deal_cell")
         dealsView.collectionView.register(UINib(nibName: "DealCell", bundle: nil), forCellWithReuseIdentifier: "deal_cell")
-        do {
-            let deals:Array<Deal> = try GetDeals().get()
-            dealsView.reloadData(deals: deals)
-        } catch let error as NetworkError{
-            print("Networ error: \(error.code as Optional) [\(error.error as Optional)")
-        } catch {
-            print(error)
-        }
+        presenter.view = self;
+        presenter.obtainDeals()
     }
     
+    func onLoadedDeals(deals: Array<Deal>) -> Void {
+        let dealsView:DealsView = view as! DealsView
+        dealsView.reloadData(deals: deals)
+    }
     
-
-    @IBAction func showAlert(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Its an alert", message: "its a message", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: { (UIAlertAction) in
-            NSLog("Action");
-        }))
-        present(alert, animated: true) {
-            NSLog("clicked");
-        }
+    func onLoadedDealsException(exception: Exception) -> Void {
+        print(exception.localizedDescription)
+        let alert = UIAlertController(title: "Error", message: exception.localizedDescription(), preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default))
+        present(alert, animated: true)
     }
 }
 

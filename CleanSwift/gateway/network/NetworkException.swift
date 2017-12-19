@@ -1,5 +1,5 @@
 //
-//  API.swift
+//  NetworkError.swift
 //  CleanSwift
 //
 //  Created by Penas Amor, Alberto on 14/12/17.
@@ -8,6 +8,4 @@
 
 import Foundation
 
-protocol API {
-    func execute(_ request: Request) -> Response
-}
+class NetworkException:Exception{}
