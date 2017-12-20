@@ -27,7 +27,7 @@
                     </constraints>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
-                        <outlet property="delegate" destination="iN0-l3-epB" id="Ab9-Ln-FIL"/>
+                        <outlet property="delegate" destination="-1" id="yk4-Fv-NlC"/>
                     </connections>
                 </searchBar>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="zEk-SH-AJu">

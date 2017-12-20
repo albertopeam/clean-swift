@@ -10,11 +10,11 @@ import Foundation
 
 class DealsInteractor {
     
-    fileprivate let getDeals:GetDeals
     fileprivate let bgQueue:OperationQueue
     fileprivate let mainQueue:OperationQueue
+    fileprivate let getDeals:GetDeals
     
-    init(getDeals:GetDeals, bgQueue:OperationQueue, mainQueue:OperationQueue) {
+    init(bgQueue:OperationQueue, mainQueue:OperationQueue, getDeals:GetDeals) {
         self.getDeals = getDeals
         self.bgQueue = bgQueue
         self.mainQueue = mainQueue

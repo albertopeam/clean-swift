@@ -17,6 +17,9 @@
 		C330F9341FB3472E00E6CE60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C330F9321FB3472E00E6CE60 /* LaunchScreen.storyboard */; };
 		C330F93F1FB3472E00E6CE60 /* CleanSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C330F93E1FB3472E00E6CE60 /* CleanSwiftTests.swift */; };
 		C330F94A1FB3472E00E6CE60 /* CleanSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C330F9491FB3472E00E6CE60 /* CleanSwiftUITests.swift */; };
+		C33E33F31FEA959B0098945F /* SearchDeals.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33E33F21FEA959B0098945F /* SearchDeals.swift */; };
+		C33E33F51FEA95FA0098945F /* DealMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33E33F41FEA95FA0098945F /* DealMapper.swift */; };
+		C33E33F71FEA99360098945F /* SearchDealsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33E33F61FEA99360098945F /* SearchDealsInteractor.swift */; };
 		C3461F901FE9209B00565A28 /* Exception.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3461F8F1FE9209B00565A28 /* Exception.swift */; };
 		C3461F921FE9490900565A28 /* SearchDealsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3461F911FE9490900565A28 /* SearchDealsService.swift */; };
 		C3C22D621FE40346004C8D3E /* DealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C22D611FE40346004C8D3E /* DealCell.swift */; };
@@ -70,6 +73,9 @@
 		C330F9451FB3472E00E6CE60 /* CleanSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C330F9491FB3472E00E6CE60 /* CleanSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftUITests.swift; sourceTree = "<group>"; };
 		C330F94B1FB3472E00E6CE60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C33E33F21FEA959B0098945F /* SearchDeals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDeals.swift; sourceTree = "<group>"; };
+		C33E33F41FEA95FA0098945F /* DealMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealMapper.swift; sourceTree = "<group>"; };
+		C33E33F61FEA99360098945F /* SearchDealsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDealsInteractor.swift; sourceTree = "<group>"; };
 		C3461F8F1FE9209B00565A28 /* Exception.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Exception.swift; path = CleanSwift/domain/Exception.swift; sourceTree = SOURCE_ROOT; };
 		C3461F911FE9490900565A28 /* SearchDealsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDealsService.swift; sourceTree = "<group>"; };
 		C3C22D611FE40346004C8D3E /* DealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealCell.swift; sourceTree = "<group>"; };
@@ -210,6 +216,7 @@
 				C330F92B1FB3472E00E6CE60 /* DealsViewController.swift */,
 				C3C22D661FE413FC004C8D3E /* DealsPresenter.swift */,
 				C3C22D641FE413EE004C8D3E /* DealsInteractor.swift */,
+				C33E33F61FEA99360098945F /* SearchDealsInteractor.swift */,
 				C3C22D6A1FE4218D004C8D3E /* DealsView.xib */,
 				C3C22D6C1FE421FB004C8D3E /* DealsView.swift */,
 				C3C22D6E1FE4291B004C8D3E /* DealCell.xib */,
@@ -241,6 +248,7 @@
 			children = (
 				C3FB4A161FE2C2C900F86EB0 /* GetDealsService.swift */,
 				C3461F911FE9490900565A28 /* SearchDealsService.swift */,
+				C33E33F41FEA95FA0098945F /* DealMapper.swift */,
 			);
 			path = deals;
 			sourceTree = "<group>";
@@ -251,6 +259,7 @@
 				C3FB4A1C1FE2C6D600F86EB0 /* Deal.swift */,
 				C3C477481FE7C5D40040B86E /* GetDeals.swift */,
 				C3461F8F1FE9209B00565A28 /* Exception.swift */,
+				C33E33F21FEA959B0098945F /* SearchDeals.swift */,
 			);
 			path = domain;
 			sourceTree = "<group>";
@@ -556,7 +565,9 @@
 				C330F92C1FB3472E00E6CE60 /* DealsViewController.swift in Sources */,
 				C3C22D6D1FE421FB004C8D3E /* DealsView.swift in Sources */,
 				C3C4774F1FE7CC920040B86E /* Provider.swift in Sources */,
+				C33E33F31FEA959B0098945F /* SearchDeals.swift in Sources */,
 				C330F92A1FB3472E00E6CE60 /* AppDelegate.swift in Sources */,
+				C33E33F51FEA95FA0098945F /* DealMapper.swift in Sources */,
 				C3461F921FE9490900565A28 /* SearchDealsService.swift in Sources */,
 				C3C22D621FE40346004C8D3E /* DealCell.swift in Sources */,
 				C3C22D671FE413FC004C8D3E /* DealsPresenter.swift in Sources */,
@@ -565,6 +576,7 @@
 				C3FB4A171FE2C2C900F86EB0 /* GetDealsService.swift in Sources */,
 				C3C22D651FE413EE004C8D3E /* DealsInteractor.swift in Sources */,
 				C3FB4A1F1FE2C9BB00F86EB0 /* NetworkException.swift in Sources */,
+				C33E33F71FEA99360098945F /* SearchDealsInteractor.swift in Sources */,
 				C3C22D691FE41412004C8D3E /* DealsAssembler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DealsViewController: UIViewController {
+class DealsViewController: UIViewController, UISearchBarDelegate {
 
     fileprivate let presenter: DealsPresenter
     
@@ -35,10 +35,25 @@ class DealsViewController: UIViewController {
     }
     
     func onLoadedDealsException(exception: Exception) -> Void {
-        print(exception.localizedDescription)
         let alert = UIAlertController(title: "Error", message: exception.localizedDescription(), preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default))
         present(alert, animated: true)
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        presenter.searchDeals(searchTerm: searchBar.text ?? "")
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
+        presenter.obtainDeals()
     }
 }
 
