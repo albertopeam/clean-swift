@@ -97,9 +97,9 @@
                 <constraint firstItem="r2r-Fq-Pm9" firstAttribute="bottom" secondItem="0o3-g6-JqM" secondAttribute="bottom" constant="2" id="E09-ro-dT7"/>
                 <constraint firstItem="Hdr-T2-Abg" firstAttribute="top" secondItem="1nD-sk-6ii" secondAttribute="bottom" constant="-1" id="JyV-DQ-Tge"/>
                 <constraint firstItem="1nD-sk-6ii" firstAttribute="leading" secondItem="X9W-4p-rF8" secondAttribute="trailing" constant="8" id="LFc-qE-Oyk"/>
-                <constraint firstItem="0o3-g6-JqM" firstAttribute="leading" secondItem="1nD-sk-6ii" secondAttribute="leading" constant="-1" id="Npe-kt-tZg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1nD-sk-6ii" secondAttribute="trailing" constant="9" id="MON-SQ-FtP"/>
+                <constraint firstItem="0o3-g6-JqM" firstAttribute="leading" secondItem="1nD-sk-6ii" secondAttribute="leading" constant="-3" id="Npe-kt-tZg"/>
                 <constraint firstItem="0o3-g6-JqM" firstAttribute="top" secondItem="Hdr-T2-Abg" secondAttribute="bottom" constant="4" id="OyD-V5-0os"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1nD-sk-6ii" secondAttribute="trailing" constant="9" id="Uny-GQ-tdL"/>
                 <constraint firstItem="7Fh-nC-f1K" firstAttribute="centerY" secondItem="bLC-WP-0zV" secondAttribute="centerY" id="W7c-Eb-phc"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="b6T-o1-JW2" secondAttribute="trailing" constant="9" id="XYo-zz-6vE"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="X9W-4p-rF8" secondAttribute="bottom" constant="-130" id="YWp-rF-Scn"/>
@@ -108,7 +108,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="leading" secondItem="X9W-4p-rF8" secondAttribute="trailing" constant="-116" id="hrk-8C-2se"/>
                 <constraint firstItem="b6T-o1-JW2" firstAttribute="top" secondItem="0o3-g6-JqM" secondAttribute="top" constant="-2" id="iO5-0B-Crf"/>
                 <constraint firstItem="Hdr-T2-Abg" firstAttribute="leading" secondItem="1nD-sk-6ii" secondAttribute="leading" id="jGr-k2-V3L"/>
-                <constraint firstItem="b6T-o1-JW2" firstAttribute="leading" secondItem="0o3-g6-JqM" secondAttribute="trailing" constant="2" id="tRK-NU-tCE"/>
+                <constraint firstItem="b6T-o1-JW2" firstAttribute="leading" secondItem="0o3-g6-JqM" secondAttribute="trailing" constant="4" id="tRK-NU-tCE"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

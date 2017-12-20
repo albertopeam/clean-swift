@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class DealsView:UIView, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class DealsView:UIView, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
     fileprivate var deals:Array<Deal> = Array()
@@ -53,5 +53,15 @@ class DealsView:UIView, UICollectionViewDataSource, UICollectionViewDelegateFlow
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return insets.top
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let deal:Deal = deals[indexPath.row]
+        let url = URL(string:"http://www.cheapshark.com/redirect?dealID="+deal.dealId)
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(url!)
+        }
     }
 }
