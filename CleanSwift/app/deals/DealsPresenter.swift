@@ -20,17 +20,23 @@ class DealsPresenter {
     }
     
     func obtainDeals() -> Void {
+        self.view?.loading(visibility: true)
         getDeals.run(completion: { (response: Array<Deal>) -> (Void) in
+            self.view?.loading(visibility: false)
             self.view?.onLoadedDeals(deals: response)
         }) { (exception: Exception) -> (Void) in
+            self.view?.loading(visibility: false)
             self.view?.onLoadedDealsException(exception: exception)
         }
     }
     
     func searchDeals(searchTerm:String) -> Void{
+        self.view?.loading(visibility: true)
         searchDeals.run(searchTerm: searchTerm, completion: { (response: Array<Deal>) -> (Void) in
+            self.view?.loading(visibility: false)
             self.view?.onLoadedDeals(deals: response)
         }) { (exception: Exception) -> (Void) in
+            self.view?.loading(visibility: false)
             self.view?.onLoadedDealsException(exception: exception)
         }
     }

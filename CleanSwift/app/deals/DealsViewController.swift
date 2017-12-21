@@ -24,7 +24,7 @@ class DealsViewController: UIViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         let dealsView:DealsView = view as! DealsView
-        dealsView.collectionView.register(UINib(nibName: "DealCell", bundle: nil), forCellWithReuseIdentifier: "deal_cell")
+        dealsView.setup(target: self, selector: #selector(refresh))
         presenter.view = self;
         presenter.obtainDeals()
     }
@@ -50,10 +50,23 @@ class DealsViewController: UIViewController, UISearchBarDelegate {
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.showsCancelButton = false
-        searchBar.text = ""
-        searchBar.resignFirstResponder()
+        cleanSearch()
         presenter.obtainDeals()
+    }
+    
+    func loading(visibility: Bool) -> Void {
+        let dealsView:DealsView = view as! DealsView
+        dealsView.loading(visibility: visibility)
+    }
+    
+    @objc func refresh(){
+        cleanSearch()
+        presenter.obtainDeals()
+    }
+    
+    fileprivate func cleanSearch() -> Void {
+        let dealsView:DealsView = view as! DealsView
+        dealsView.cleanSearch()
     }
 }
 

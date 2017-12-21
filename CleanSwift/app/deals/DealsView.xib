@@ -58,6 +58,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="collectionView" destination="zEk-SH-AJu" id="sd6-2w-3FY"/>
+                <outlet property="searchBar" destination="7ch-a4-xWW" id="pzp-fe-CRX"/>
             </connections>
             <point key="canvasLocation" x="101.5" y="53.5"/>
         </view>

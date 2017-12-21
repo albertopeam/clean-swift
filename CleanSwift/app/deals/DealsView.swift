@@ -11,9 +11,18 @@ import UIKit
 
 class DealsView:UIView, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
-    fileprivate var deals:Array<Deal> = Array()
+    fileprivate var refreshControl:UIRefreshControl!
     fileprivate let insets = UIEdgeInsets(top: 0.0, left: 16.0, bottom: 16.0, right: 10.0)
+    fileprivate var deals:Array<Deal> = Array()
+    
+    func setup(target: AnyObject, selector: Selector) -> Void {
+        collectionView.register(UINib(nibName: "DealCell", bundle: nil), forCellWithReuseIdentifier: "deal_cell")
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(target, action: selector, for: .valueChanged)
+        collectionView.addSubview(refreshControl)
+    }
     
     func reloadData(deals:Array<Deal>) -> Void {
         self.deals = deals
@@ -63,5 +72,19 @@ class DealsView:UIView, UICollectionViewDataSource, UICollectionViewDelegateFlow
         } else {
             UIApplication.shared.openURL(url!)
         }
+    }
+    
+    func loading(visibility: Bool) -> Void {
+        if visibility {
+            refreshControl.beginRefreshing()
+        }else{
+            refreshControl.endRefreshing()
+        }
+    }
+    
+    func cleanSearch() -> Void {
+        searchBar.showsCancelButton = false
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
     }
 }
